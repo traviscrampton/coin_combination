@@ -14,7 +14,9 @@ require('coin_combinations')
   # end
   # it('counts the amount of quarters') do
   #   expect(50.coin_combo()).to(eq(2))
-  it('counts the amount of dimes') do
-    expect(20.coin_combo()).to(eq(2))
+  # it('counts the amount of dimes') do
+  #   expect(20.coin_combo()).to(eq(2))
+  it('sorts both quarters and dimes') do
+    expect(70.coin_combo()).to(eq([2, 2]))
 end
 end

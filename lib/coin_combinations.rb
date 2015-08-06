@@ -12,7 +12,7 @@ class Fixnum
     #
     #   coin_amount.to_s().concat(" dimes")
 
-
+    final_change = []
     quarters = 0
     dimes = 0
     nickles = 0
@@ -28,7 +28,7 @@ class Fixnum
       change = change.-(10)
       dimes = dimes.+(1)
     end
-
-    
+    final_change.push(quarters, dimes)
+    final_change
   end
 end
