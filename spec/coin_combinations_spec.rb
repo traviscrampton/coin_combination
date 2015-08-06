@@ -28,4 +28,7 @@ require('coin_combinations')
    it('writes out dimes plural or singluar') do
      expect(10.coin_combo()).to(eq("1 dime"))
    end
+   it('writes out dimes and quarters both singular and plural') do
+   expect(45.coin_combo()).to(eq("1 quarter 2 dimes"))
+ end
 end
