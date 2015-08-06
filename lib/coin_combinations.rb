@@ -23,6 +23,12 @@ class Fixnum
       change = change.-(25)
       quarters = quarters.+(1)
     end
-    quarters
+
+    until change.<(10)
+      change = change.-(10)
+      dimes = dimes.+(1)
+    end
+
+    
   end
 end
