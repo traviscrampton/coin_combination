@@ -32,25 +32,33 @@ class Fixnum
     if quarters == 0
       ''
     elsif quarters == 1
-    #   final_change.concat(quarters.to_s.concat(" quarter "))
-    # else
-    #   final_change.concat(quarters.to_s.concat(" quarters "))
-    # end
-    final_change.push(quarters.to_s.concat(" quarter"))
-  else
-    final_change.push(quarters.to_s.concat(" quarters"))
+      final_change.push(quarters.to_s.concat(" quarter"))
+    else
+      final_change.push(quarters.to_s.concat(" quarters"))
   end
 
     if dimes == 0
       ''
     elsif dimes == 1
-    #   final_change.concat(dimes.to_s.concat(" dime "))
-    # else
-    #   final_change.concat(dimes.to_s.concat(" dimes "))
-    # end
-    final_change.push(dimes.to_s.concat(" dime"))
-  else
-    final_change.push(dimes.to_s.concat(" dimes"))
+      final_change.push(dimes.to_s.concat(" dime"))
+    else
+      final_change.push(dimes.to_s.concat(" dimes"))
+  end
+
+    if nickles == 0
+      ''
+    elsif nickles == 1
+      final_change.push(nickles.to_s.concat(" nickle"))
+    else
+      final_change.push(nickles.to_s.concat(" nickles"))
+  end
+
+    if pennies == 0
+      ''
+    elsif pennies == 1
+      final_change.push(pennies.to_s.concat(" penny"))
+    else
+      final_change.push(pennies.to_s.concat(" pennies"))
   end
 
     final_change = final_change.join(' ')
