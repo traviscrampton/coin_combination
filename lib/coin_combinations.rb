@@ -1,18 +1,6 @@
 class Fixnum
   define_method(:coin_combo) do
-
-    # coin_values = { "quarter" => 25, "dime" => 10, "nickle" => 5, "pennies" => 1 }
-    # coin_amount = self/25
-    # coin_remain = self%25
-    # if coin_remain == 0
-    #   coin_amount.to_s().concat(" quarters")
-    #
-    #
-    # elsif coin_remain > 0 && coin_remain%10 == 0
-    #
-    #   coin_amount.to_s().concat(" dimes")
-
-    final_change = []
+    final_change = ''
     quarters = 0
     dimes = 0
     nickles = 0
@@ -39,7 +27,22 @@ class Fixnum
       pennies = pennies.+(1)
     end
 
-    final_change.push(quarters, dimes, nickles, pennies)
+    if quarters == 0
+      ''
+    elsif quarters == 1
+      final_change.concat(quarters.to_s.concat(" quarter"))
+    else quarters > 1
+      final_change.concat(quarters.to_s.concat(" quarters"))
+    end
+
+    if dimes == 0
+      ''
+    elsif dimes == 1
+      final_change.concat(dimes.to_s.concat(" dime"))
+    else quarters > 1
+      final_change.concat(dimes.to_s.concat(" dimes"))
+    end
+
     final_change
   end
 end

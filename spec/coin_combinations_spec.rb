@@ -19,8 +19,13 @@ require('coin_combinations')
   # it('sorts both quarters and dimes') do
   #   expect(70.coin_combo()).to(eq([2, 2,]))
 
-  it('sorts quarters, dimes, nickles and pennies') do
-    expect(87.coin_combo()).to(eq([3, 1, 0, 2]))
+  # it('sorts quarters, dimes, nickles and pennies') do
+  #   expect(87.coin_combo()).to(eq([3, 1, 0, 2]))
+   it('writes out quarter plural or singluar') do
+     expect(50.coin_combo()).to(eq("2 quarters"))
+   end
 
-end
+   it('writes out dimes plural or singluar') do
+     expect(10.coin_combo()).to(eq("1 dime"))
+   end
 end
