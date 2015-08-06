@@ -28,7 +28,18 @@ class Fixnum
       change = change.-(10)
       dimes = dimes.+(1)
     end
-    final_change.push(quarters, dimes)
+
+    until change.<(5)
+      change = change.-(5)
+      nickles = nickles.+(1)
+    end
+
+    until change.<(1)
+      change = change.-(1)
+      pennies = pennies.+(1)
+    end
+
+    final_change.push(quarters, dimes, nickles, pennies)
     final_change
   end
 end
